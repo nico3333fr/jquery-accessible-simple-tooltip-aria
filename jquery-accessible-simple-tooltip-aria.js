@@ -41,35 +41,32 @@ $(document).ready(function(){
 
       });
    
-      
-      // events ------------------
-      $( 'body' ).on( 'mouseenter focusin', '.js-simple-tooltip', function( event ) {
-         var $this = $(this),
-             $tooltip_to_show = $('#' + $this.attr( 'aria-describedby' ));
-		     
-         $tooltip_to_show.attr( 'aria-hidden', 'false');
-     
-      })
-	    .on( "mouseleave focusout", ".js-simple-tooltip", function( event ) {
-         var $this = $(this),
-             $tooltip_to_show = $('#' + $this.attr( 'aria-describedby' ));
-		     
-         $tooltip_to_show.attr( 'aria-hidden', 'true');  
-	    });
-      
-      // close esc key
-      $( 'body' ).on( "keydown", ".js-simple-tooltip", function( event ) {
-         var $this = $(this),
-             $tooltip_to_show = $('#' + $this.attr( 'aria-describedby' ));
-      
-         if ( event.keyCode == 27 ) { // esc
-             $tooltip_to_show.attr( 'aria-hidden', 'true');
-            }
-         
-      });
-   
-   
    }
+      
+   // events ------------------
+   $( 'body' ).on( 'mouseenter focusin', '.js-simple-tooltip', function( event ) {
+      var $this = $(this),
+          $tooltip_to_show = $('#' + $this.attr( 'aria-describedby' ));
+		     
+      $tooltip_to_show.attr( 'aria-hidden', 'false');
+     
+   })
+   .on( "mouseleave focusout", ".js-simple-tooltip", function( event ) {
+      var $this = $(this),
+          $tooltip_to_show = $('#' + $this.attr( 'aria-describedby' ));
+		     
+      $tooltip_to_show.attr( 'aria-hidden', 'true');  
+   });
+      
+   // close esc key
+   $( 'body' ).on( "keydown", ".js-simple-tooltip", function( event ) {
+      var $this = $(this),
+          $tooltip_to_show = $('#' + $this.attr( 'aria-describedby' ));
+      
+      if ( event.keyCode == 27 ) { // esc
+          $tooltip_to_show.attr( 'aria-hidden', 'true');
+         }
+         
+   });
 
-   
 });   
