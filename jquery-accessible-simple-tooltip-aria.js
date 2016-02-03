@@ -14,7 +14,7 @@ $(document).ready(function(){
       $js_simple_tooltips.each( function(index_to_expand) {
           var $this = $(this) ,
               index_lisible = index_to_expand+1,
-			        options = $this.data(),
+              options = $this.data(),
               $tooltip_text = options.simpletooltipText || '',
               $tooltip_prefix_class = typeof options.simpletooltipPrefixClass !== 'undefined' ? options.simpletooltipPrefixClass + '-' : '',
               $tooltip_content_id = typeof options.simpletooltipContentId !== 'undefined' ? '#' + options.simpletooltipContentId : '',
