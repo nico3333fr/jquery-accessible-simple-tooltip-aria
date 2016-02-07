@@ -1,0 +1,39 @@
+{
+  "title": "jQuery accessible simple tooltip using ARIA",
+  "name": "jquery-accessible-simple-tooltip-aria",
+  "description": "This jQuery plugin will provide you an accessible and simple non-modal tooltip, using ARIA.",
+  "version": "1.0.1",
+  "keywords": [
+    "Accessibility",
+    "ARIA",
+    "tooltip",
+    "jQueryPlugin",
+    "a11y"
+  ],
+  "author": [
+    {
+      "name": "Nicolas Hoffmann",
+      "email": "dante3333@gmail.com",
+      "web": "http://www.nicolas-hoffmann.net/"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.0.0"
+  },
+  "bugs": {
+    "web": "https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/issues"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria.git"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "MIT",
+      "url": "https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "http://a11y.nicolas-hoffmann.net/simple-tooltip/"
+}
