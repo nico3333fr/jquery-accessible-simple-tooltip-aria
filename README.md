@@ -35,6 +35,12 @@ Use <code>data-simpletooltip-text</code> <strong>or</strong> <code>data-simpleto
 ## How to style it
  
 ```css
+/* it will work better with this box-sizing, you may adapt it to your needs */
+/*html { box-sizing: border-box; }
+*, *:before, *:after {
+  box-sizing: inherit;
+}*/
+
 /* Tooltip hidden by default */
 .simpletooltip[aria-hidden="true"],
 .minimalist-simpletooltip[aria-hidden="true"],
