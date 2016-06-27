@@ -2,7 +2,7 @@
   "title": "jQuery accessible simple tooltip using ARIA",
   "name": "jquery-accessible-simple-tooltip-aria",
   "description": "This jQuery plugin will provide you an accessible and simple non-modal tooltip, using ARIA.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "Accessibility",
     "ARIA",
