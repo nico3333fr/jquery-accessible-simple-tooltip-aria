@@ -20,7 +20,8 @@ You can use it on the tag you want (<code>input</code>, <code>button</code>, <co
 
 No license problem, it uses MIT license, so <strong>it’s free, open-source and you can do whatever you want with it, including commercial use</strong> (<a href="https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/blob/master/LICENSE">permission notice</a>)
 
-It is also installable via npm: <code>npm i juqery-accessible-simple-tooltip-aria</code>
+It is also installable via npm: <code>npm i jquery-accessible-simple-tooltip-aria</code>
+or bower: <code>bower install jquery-accessible-simple-tooltip-aria</code>
  
  
 ## Options and attributes
