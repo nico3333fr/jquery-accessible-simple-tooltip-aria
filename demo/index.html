@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta charset="utf-8" />
+ <title>jQuery accessible simple tooltip, using ARIA - By Nicolas Hoffmann</title>
+
+<link href="http://a11y.nicolas-hoffmann.net/simple-tooltip/css/styles_mini_1463393814.css" rel="stylesheet" media="all" />
+
+<meta name="description" content="This jQuery plugin will provide you an accessible simple non-modal tooltip using ARIA." />
+<meta name="keywords" content="jQuery, accessible, non-modal, tooltip, window, aria, a11y, nicolas, hoffmann" />
+
+<meta name="robots" content="index, follow" />
+<link href="/favicon.ico" type="image/ico" rel="icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--[if IE]>
+<meta http-equiv="imagetoolbar" content="no" />
+<link href="/favicon.ico" type="image/ico" rel="shortcut icon" />
+<![endif]-->
+<!-- Open Graph Meta Data -->
+<meta property="og:title" content="jQuery accessible simple tooltip, using ARIA - By Nicolas Hoffmann" />
+<meta property="og:description" content="This jQuery plugin will provide you an accessible simple non-modal tooltip using ARIA." />
+
+<meta property="og:type" content="website" />
+<meta property="og:image" content="http://a11y.nicolas-hoffmann.net/apple-touch-icon.png" />
+<meta property="og:url" content="http://a11y.nicolas-hoffmann.net/simple-tooltip/" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="http://a11y.nicolas-hoffmann.net/simple-tooltip/" />
+<meta name="twitter:title" content="jQuery accessible simple tooltip, using ARIA - By Nicolas Hoffmann" />
+<meta name="twitter:description" content="This jQuery plugin will provide you an accessible simple non-modal tooltip using ARIA." />
+<meta name="twitter:image" content="http://a11y.nicolas-hoffmann.net/apple-touch-icon.png" />
+<meta name="twitter:site" content="Nico3333fr" />
+<meta name="twitter:creator" content="Nico3333fr" />
+
+<link rel="apple-touch-icon" href="http://a11y.nicolas-hoffmann.net/apple-touch-icon.png" />
+
+
+<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="../jquery-accessible-simple-tooltip-aria.js"></script>
+
+
+</head>
+<body role="document">
+
+<div id="ribbon">
+ <p class="m0"><strong>M<span class="small">ade</span> I<span class="small">n</span> L<span class="small">a</span> F<span class="small">rance</span>!</strong></p>
+</div>
+
+<div id="page" class="mw960e pt1 pb2" role="main">
+ <h1 class="aligncenter mt0">jQuery accessible simple tooltip window, using <abbr title="Accessible Rich Internet Application">ARIA</abbr></h1>
+
+ <div class="right mt1 ml1 mb1 onmobile-ml0 automobile">
+  <p class="mt0"><a href="https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria" class="button--git play automobile">Find/fork me on Github</a></p>
+  <p><a href="/" class="button--git play automobile">Other accessible plugins</a></p>
+ </div>
+ <p>This jQuery plugin will provide you an accessible and simple non-modal tooltip, using <abbr title="Accessible Rich Internet Application">ARIA</abbr>.</p>
+
+ <div class="row w100 autotablet">
+   <div class="col w38 autotablet">
+
+    <h2 class="mt1">First simple example</h2>
+
+    <pre><code class="language-markup">&lt;button class="js-simple-tooltip"
+ data-simpletooltip-text="Cool, it works!"&gt;
+  Hover or focus me to show the tooltip
+&lt;/button&gt;
+</code></pre>
+
+    <p><button class="js-simple-tooltip button" data-simpletooltip-text="Cool, it works!">Hover or focus me to show the tooltip</button></p>
+
+   </div>
+   <div class="col w2 notablet nomobile gut"></div>
+   <div class="col w60 autotablet">
+
+    <h2 class="mt1">Second simple example</h2>
+
+    <pre><code class="language-markup">&lt;button class="js-simple-tooltip"
+ data-simpletooltip-content-id="tooltip-case_1"&gt;
+  Show me another tooltip
+&lt;/button&gt;
+&lt;div id="tooltip-case_1" class="hidden"&gt;Woot, you can take the content of a hidden block.&lt;/div&gt;
+</code></pre>
+
+    <p><button class="js-simple-tooltip button" data-simpletooltip-prefix-class="minimalist" data-simpletooltip-content-id="tooltip-case_1">Show me another tooltip</button></p>
+
+    <div id="tooltip-case_1" class="hidden">Woot, you can take the content of a hidden block.</div>
+
+   </div>
+ </div>
+
+ <!--<h2>Last news</h2>
+
+ <p><strong>26th of June, 2015</strong>: fixed <a href="https://github.com/nico3333fr/jquery-accessible-dialog-tooltip-aria/issues/1">a bug in Chrome</a>.</p>-->
+
+ <h2>Some informations about this script</h2>
+
+ <div class="row w100">
+  <div class="col w25 autotablet aligncenter">
+    <p><button class="js-simple-tooltip button" data-simpletooltip-prefix-class="minimalist" data-simpletooltip-text="It relies on ARIA Design pattern for Tooltips.">It’s accessible</button></p>
+
+  </div>
+  <div class="col w25 autotablet aligncenter">
+    <p><button class="js-simple-tooltip button" data-simpletooltip-prefix-class="minimalist" data-simpletooltip-content-id="informations_2">It’s lightweight</button></p>
+
+    <div id="informations_2" class="hidden">
+     About 2.8<abbr title="kilobytes">kb</abbr> (development), 2.3<abbr title="kilobytes">kb</abbr> (minified), only <strong>970&nbsp;bytes minified and gzipped</strong>.
+    </div>
+  </div>
+  <div class="col w25 autotablet aligncenter">
+    <p><button class="js-simple-tooltip button" data-simpletooltip-prefix-class="minimalist-left" data-simpletooltip-text="There are only 3 very simple attributes to know.">It’s easy</button></p>
+
+  </div>
+  <div class="col w25 autotablet aligncenter">
+    <p><button class="js-simple-tooltip button" data-simpletooltip-prefix-class="minimalist-left" data-simpletooltip-content-id="informations_5">It’s free</button></p>
+
+    <div id="informations_5" class="hidden">
+     No license problem, it uses MIT license, so <strong>it’s free, open-source and you can do whatever you want with it, including commercial use</strong>.
+    </div>
+  </div>
+ </div>
+
+ <h2>Why it is accessible</h2>
+
+  <ul class="mt0">
+   <li>It relies on <a href="http://www.w3.org/TR/wai-aria-practices/#tooltip"><abbr title="Accessible Rich Internet Application">ARIA</abbr> Design pattern for Tooltips</a>;</li>
+   <li>Thanks to <code>aria-describedby</code> and <code>id</code>s generated on the fly, you never loose any information.</li>
+  </ul>
+  <p>You can close it using <kbd>Esc</kbd>.</p>
+
+ <h2>How it works</h2>
+
+ <p>Basically, the scripts wraps each <code>class="js-simple-tooltip"</code> into a <code>span class="&lt;your-prefix-class&gt;-container"</code> and adds the content into a hidden content next to it. Once you focus or hover the element with <code>class="js-simple-tooltip"</code>, it is displayed.</p>
+
+ <p>You can use it on the tag you want (<code>input</code>, <code>button</code>, <code>a</code>…)</p>
+
+ <p>No license problem, it uses MIT license, so <strong>it’s free, open-source and you can do whatever you want with it, including commercial use</strong> (<a href="https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/blob/master/LICENSE">permission notice</a>)</p>
+
+
+ <h2>Last news</h2>
+
+
+ <p class="ml1 mr1">27th of June  2016: this plugin is available on bower, and you can install it with <code>bower install jquery-accessible-simple-tooltip-aria</code>.</p>
+
+
+ <p class="ml1 mr1">7th of February 2016: <a href="https://www.npmjs.com/package/jquery-accessible-simple-tooltip-aria">this plugin is available on NPMjs.com</a>, and you can install it with <code>npm i jquery-accessible-simple-tooltip-aria</code>.</p>
+
+
+ <h2>Options and attributes</h2>
+
+ <p>Use <code>data-simpletooltip-text</code> <strong>or</strong> <code>data-simpletooltip-content-id</code> <strong>attributes</strong> on an element to activate the tooltip.</p>
+
+ <ul>
+  <li>Simply put <code>class="js-simpletooltip"</code> on a button to activate the script.</li>
+  <li>Attribute <code>data-simpletooltip-prefix-class</code> (non mandatory): the prefix to all style classes of the tooltip (useful to set up different styles).</li>
+  <li>Attribute <code>data-simpletooltip-text</code>: the text of your tooltip.</li>
+    <li>Attribute <code>data-simpletooltip-content-id</code>: the <code>id</code> of (hidden) content in your page that will be put into your tooltip.</li>
+  </ul>
+
+ <h2>How to style it</h2>
+
+ <p>Here are the styles used for this page:<br />(I’ve used no prefix class, <code>data-simpletooltip-prefix-class="<strong>minimalist</strong>"</code> and <code>data-simpletooltip-prefix-class="<strong>minimalist-left</strong>"</code> to position the tooltip on the left on some examples, you can set up your own
+ styles)</p>
+
+ <pre><code class="language-css">/* Tooltip hidden by default */
+.simpletooltip[aria-hidden="true"],
+.minimalist-simpletooltip[aria-hidden="true"],
+.minimalist-left-simpletooltip[aria-hidden="true"] {
+  display: none;
+}
+/* position relative for containers */
+.simpletooltip_container,
+.minimalist-simpletooltip_container,
+.minimalist-left-simpletooltip_container {
+  position: relative;
+}
+
+/* tooltip styles */
+.simpletooltip,
+.minimalist-simpletooltip,
+.minimalist-left-simpletooltip {
+  position: absolute;
+  z-index: 666;
+  width: 10em;
+  border-radius: .5em;
+  background: rgba( 0, 0, 0, .9 );
+  color: #eee;
+  padding: .5em;
+  text-align: left;
+  line-height: 1.3;
+}
+.simpletooltip,
+.minimalist-simpletooltip {
+  right: auto;
+  left: 100%;
+  margin-left: .5em;
+}
+.minimalist-left-simpletooltip {
+  right: 100%;
+  left: auto;
+  margin-right: .5em;
+}
+/* used pseudo-element to make arrows */
+.simpletooltip::before,
+.minimalist-simpletooltip::before,
+.minimalist-left-simpletooltip::before {
+  content: '';
+  speak: none;
+  position: absolute;
+  z-index: 666;
+  width: 10px;
+  height: 10px;
+}
+.simpletooltip::before,
+.minimalist-simpletooltip::before {
+  top: .5em;
+  left: -10px;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-right: 10px solid rgba( 0, 0, 0, .9 );
+}
+.minimalist-left-simpletooltip::before {
+  top: .5em;
+  right: -10px;
+  margin-right: -10px;
+  border: 10px solid transparent;
+  border-left: 10px solid rgba( 0, 0, 0, .9 )
+}
+
+/* it can be easily adapted in media-queries for tablets/mobile */
+
+/* for this example: mobile */
+@media (max-width: 44.375em) {
+
+  .simpletooltip,
+  .minimalist-simpletooltip,
+  .minimalist-left-simpletooltip  {
+    top: 100%;
+    left: 50%;
+  right: 0;
+    margin: 0;
+  margin-top: .7em;
+  margin-left: -5em;
+  }
+  .simpletooltip::before,
+  .minimalist-simpletooltip::before,
+  .minimalist-left-simpletooltip::before  {
+    top: -10px;
+  right: auto;
+  left: 50%;
+  margin-left: -5px;
+    margin-top: -10px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid rgba( 0, 0, 0, .9 );
+  }
+
+}
+
+
+</code></pre>
+
+      <p>As usual, it is not prohibited to tell me that you’ve used it, or send me a little “thank you”. ;) </p>
+
+
+<div class="footer mt2" role="contentinfo">2016 - this plugin has been made by <a href="http://www.nicolas-hoffmann.net/" hreflang="fr">Nicolas Hoffmann</a> (<a href="https://twitter.com/Nico3333fr">@Nico3333fr</a>), and couldn’t be made without the precious help of <a href="https://twitter.com/ScreenFeedFr">@ScreenFeedFr</a>, <a href="https://twitter.com/goetsu">@goetsu</a>, <a href="https://twitter.com/johan_ramon">@johan_ramon</a> and <a href="https://twitter.com/sophieschuerman">@sophieschuerman</a>.</div>
+
+</div>
+<script src="http://a11y.nicolas-hoffmann.net/simple-tooltip/js/prism.js"></script>
+</body>
+</html>
