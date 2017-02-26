@@ -4,6 +4,7 @@
 
   /*
    * jQuery accessible simple (non-modal) tooltip window, using ARIA
+   * @version v2.0.2 
    * Website: http://a11y.nicolas-hoffmann.net/simple-tooltip/
    * License MIT: https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/blob/master/LICENSE
    */
