@@ -9,7 +9,7 @@ You can download and install the plugin via:
 - bower: `$ bower install jquery-accessible-simple-tooltip-aria`
 ## Demo
 
-The demo is here: http://a11y.nicolas-hoffmann.net/simple-tooltip/
+The demo is here: https://a11y.nicolas-hoffmann.net/simple-tooltip/
 
 ## Why it is accessible
 
