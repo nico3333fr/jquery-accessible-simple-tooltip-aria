@@ -3,7 +3,7 @@
   "description": "A simple jQuery code to provide an accessible and simple non-modal tooltip, using ARIA.",
   "homepage": "https://a11y.nicolas-hoffmann.net/simple-tooltip/",
   "main": "jquery-accessible-simple-tooltip-aria.js",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "keywords": [
     "Accessibility",
     "ARIA",
