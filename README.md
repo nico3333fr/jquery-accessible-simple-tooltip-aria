@@ -45,6 +45,8 @@ Use <code>data-simpletooltip-text</code> <strong>or</strong> <code>data-simpleto
 - Attribute <code>data-simpletooltip-prefix-class</code> (non mandatory): the prefix to all style classes of the tooltip (useful to set up different styles).
 - Attribute <code>data-simpletooltip-text</code>: the text of your tooltip.
 - Attribute <code>data-simpletooltip-content-id</code>: the <code>id</code> of (hidden) content in your page that will be put into your tooltip.
+- Attribute <code>data-simpletooltip-wrapper-tag</code>: the tag used for wrapping your tooltip (<code>span</code> by default).
+- Attribute <code>data-simpletooltip-tag</code>: the tag used for your tooltip (<code>span</code> by default).
 
 ## How to style it
 
@@ -66,6 +68,7 @@ Use <code>data-simpletooltip-text</code> <strong>or</strong> <code>data-simpleto
 .minimalist-simpletooltip_container,
 .minimalist-left-simpletooltip_container {
   position: relative;
+  display: inline;
 }
 
 /* tooltip styles */
@@ -73,6 +76,7 @@ Use <code>data-simpletooltip-text</code> <strong>or</strong> <code>data-simpleto
 .minimalist-simpletooltip,
 .minimalist-left-simpletooltip {
   position: absolute;
+  display: inline-block;
   z-index: 666;
   width: 10em;
   border-radius: .5em;
@@ -130,18 +134,18 @@ Use <code>data-simpletooltip-text</code> <strong>or</strong> <code>data-simpleto
   .minimalist-left-simpletooltip  {
     top: 100%;
     left: 50%;
-	right: 0;
+    right: 0;
     margin: 0;
-	margin-top: .7em;
-	margin-left: -5em;
+    margin-top: .7em;
+    margin-left: -5em;
   }
   .simpletooltip::before,
   .minimalist-simpletooltip::before,
   .minimalist-left-simpletooltip::before  {
     top: -10px;
-	right: auto;
-	left: 50%;
-	margin-left: -5px;
+    right: auto;
+    left: 50%;
+    margin-left: -5px;
     margin-top: -10px;
     border: 10px solid transparent;
     border-bottom: 10px solid rgba( 0, 0, 0, .9 );

@@ -102,7 +102,7 @@
 
   </div>
   <div class="col w25 autotablet aligncenter">
-    <p><button class="js-simple-tooltip button" data-simpletooltip-prefix-class="minimalist" data-simpletooltip-content-id="informations_2">It’s lightweight</button></p>
+    <p><button class="js-simple-tooltip button" data-simpletooltip-prefix-class="minimalist" data-simpletooltip-content-id="informations_2" data-simpletooltip-wrapper-tag="div" data-simpletooltip-tag="div">It’s lightweight</button></p>
 
     <div id="informations_2" class="hidden">
      About 2.8<abbr title="kilobytes">kb</abbr> (development), 2.3<abbr title="kilobytes">kb</abbr> (minified), only <strong>970&nbsp;bytes minified and gzipped</strong>.
@@ -124,7 +124,7 @@
  <h2>Why it is accessible</h2>
 
   <ul class="mt0">
-   <li>It relies on <a href="http://www.w3.org/TR/wai-aria-practices/#tooltip"><abbr title="Accessible Rich Internet Application">ARIA</abbr> Design pattern for Tooltips</a>;</li>
+   <li>It relies on <a href="https://www.w3.org/TR/wai-aria-practices/#tooltip"><abbr title="Accessible Rich Internet Application">ARIA</abbr> Design pattern for Tooltips</a>;</li>
    <li>Thanks to <code>aria-describedby</code> and <code>id</code>s generated on the fly, you never loose any information.</li>
   </ul>
   <p>You can close it using <kbd>Esc</kbd>.</p>
@@ -141,12 +141,18 @@
  <h2>Last news</h2>
 
 
+ <p class="ml1 mr1">17th of July 2018: added <code>data-simpletooltip-wrapper-tag</code> and <code>data-simpletooltip-tag</code> attributes (to specify tags used for tooltip), based on <a href="https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/issues/13">as kindly suggested by @mh-nichts</a>.</p>
+
+ <p class="ml1 mr1">1st of December 2017: added a fix in case of an already existing attribute <code>aria-describedby</code>, <a href="https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/issues/11">as kindly requested by @jum44</a>.</p>
+
+ <p class="ml1 mr1">18th of April 2017: linted and reindented code properly.</p>
+
+ <p class="ml1 mr1">15th of July 2016: thanks to <a href="https://github.com/nico3333fr/jquery-accessible-simple-tooltip-aria/pull/8">dhoko’s fantastic work</a>, this projet is a real jQuery plugin.</p>
+
  <p class="ml1 mr1">27th of June  2016: this plugin is available on bower, and you can install it with <code>bower install jquery-accessible-simple-tooltip-aria</code>.</p>
 
 
  <p class="ml1 mr1">7th of February 2016: <a href="https://www.npmjs.com/package/jquery-accessible-simple-tooltip-aria">this plugin is available on NPMjs.com</a>, and you can install it with <code>npm i jquery-accessible-simple-tooltip-aria</code>.</p>
-
-
  <h2>Options and attributes</h2>
 
  <p>Use <code>data-simpletooltip-text</code> <strong>or</strong> <code>data-simpletooltip-content-id</code> <strong>attributes</strong> on an element to activate the tooltip.</p>
@@ -155,8 +161,10 @@
   <li>Simply put <code>class="js-simpletooltip"</code> on a button to activate the script.</li>
   <li>Attribute <code>data-simpletooltip-prefix-class</code> (non mandatory): the prefix to all style classes of the tooltip (useful to set up different styles).</li>
   <li>Attribute <code>data-simpletooltip-text</code>: the text of your tooltip.</li>
-    <li>Attribute <code>data-simpletooltip-content-id</code>: the <code>id</code> of (hidden) content in your page that will be put into your tooltip.</li>
-  </ul>
+  <li>Attribute <code>data-simpletooltip-content-id</code>: the <code>id</code> of (hidden) content in your page that will be put into your tooltip.</li>
+  <li>Attribute <code>data-simpletooltip-wrapper-tag</code>: the tag used for wrapping your tooltip (<code>span</code> by default).</li>
+  <li>Attribute <code>data-simpletooltip-tag</code>: the tag used for your tooltip (<code>span</code> by default).</li>
+</ul>
 
  <h2>How to style it</h2>
 
@@ -174,6 +182,7 @@
 .minimalist-simpletooltip_container,
 .minimalist-left-simpletooltip_container {
   position: relative;
+  display: inline;
 }
 
 /* tooltip styles */
@@ -181,6 +190,7 @@
 .minimalist-simpletooltip,
 .minimalist-left-simpletooltip {
   position: absolute;
+  display: inline-block;
   z-index: 666;
   width: 10em;
   border-radius: .5em;
@@ -238,18 +248,18 @@
   .minimalist-left-simpletooltip  {
     top: 100%;
     left: 50%;
-  right: 0;
+    right: 0;
     margin: 0;
-  margin-top: .7em;
-  margin-left: -5em;
+    margin-top: .7em;
+    margin-left: -5em;
   }
   .simpletooltip::before,
   .minimalist-simpletooltip::before,
   .minimalist-left-simpletooltip::before  {
     top: -10px;
-  right: auto;
-  left: 50%;
-  margin-left: -5px;
+    right: auto;
+    left: 50%;
+    margin-left: -5px;
     margin-top: -10px;
     border: 10px solid transparent;
     border-bottom: 10px solid rgba( 0, 0, 0, .9 );
@@ -263,9 +273,9 @@
       <p>As usual, it is not prohibited to tell me that you’ve used it, or send me a little “thank you”. ;) </p>
 
 
-<div class="footer mt2" role="contentinfo">2016 - this plugin has been made by <a href="http://www.nicolas-hoffmann.net/" hreflang="fr">Nicolas Hoffmann</a> (<a href="https://twitter.com/Nico3333fr">@Nico3333fr</a>), and couldn’t be made without the precious help of <a href="https://twitter.com/ScreenFeedFr">@ScreenFeedFr</a>, <a href="https://twitter.com/goetsu">@goetsu</a>, <a href="https://twitter.com/johan_ramon">@johan_ramon</a> and <a href="https://twitter.com/sophieschuerman">@sophieschuerman</a>.</div>
+<div class="footer mt2" role="contentinfo">2018 - this plugin has been made by <a href="https://www.nicolas-hoffmann.net/" hreflang="fr">Nicolas Hoffmann</a> (<a href="https://twitter.com/Nico3333fr">@Nico3333fr</a>), and couldn’t be made without the precious help of <a href="https://twitter.com/ScreenFeedFr">@ScreenFeedFr</a>, <a href="https://twitter.com/goetsu">@goetsu</a>, <a href="https://twitter.com/johan_ramon">@johan_ramon</a> and <a href="https://twitter.com/sophieschuerman">@sophieschuerman</a>.</div>
 
 </div>
-<script src="http://a11y.nicolas-hoffmann.net/simple-tooltip/js/prism.js"></script>
+<script src="https://a11y.nicolas-hoffmann.net/simple-tooltip/js/prism.js"></script>
 </body>
 </html>
