@@ -20,7 +20,7 @@
         var aria_describedby = element.attr('aria-describedby') || '';
 
         element.attr({
-            'aria-describedby': 'label_simpletooltip_' + index_lisible + ' ' + aria_describedby
+            'aria-describedby': ('label_simpletooltip_' + index_lisible + ' ' + aria_describedby).trim()
         });
 
         element.wrap('<span class="' + prefix_class + 'simpletooltip_container"></span>');
